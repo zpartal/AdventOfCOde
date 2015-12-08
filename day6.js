@@ -3,33 +3,33 @@
 var fs = require('fs');
 var input = fs.readFileSync('day6_input.txt').toString().split('\n');
 
-var lights = { A : [], B : [] };
+var lights = { A: [], B: [] };
 
-for(var i=0; i<1000; i++) { lights.A[i] = []; lights.B[i] = []; }
+for (var i = 0; i < 1000; i++) { lights.A[i] = []; lights.B[i] = []; }
 
-function updateLightsA(lights,mode,x1,y1,x2,y2) {
+function updateLightsA(lights, mode, x1, y1, x2, y2) {
   for (var x = x1; x <= x2; ++x)
     for (var y = y1; y <= y2; ++y)
       lights[y][x] = (mode === "toggle") ? !lights[y][x] : (mode === "on");
 }
 
-function updateLightsB(lights,mode,x1,y1,x2,y2) {
+function updateLightsB(lights, mode, x1, y1, x2, y2) {
   for (var x = x1; x <= x2; ++x)
     for (var y = y1; y <= y2; ++y) {
       lights[y][x] = lights[y][x] || 0;
-      if (mode === "on" ) ++lights[y][x];
-      else if (mode === "off" && lights[y][x] > 0) --lights[y][x];
+      if (mode === "on")++lights[y][x];
+      else if (mode === "off" && lights[y][x] > 0)--lights[y][x];
       else if (mode === "toggle") lights[y][x] += 2;
     }
 }
 
-input.forEach(function(val) {
+input.forEach(function (val) {
   var regEx = /(on|off|toggle)\D+(\d+),(\d+)\D+(\d+),(\d+)/;
   var cmd = regEx.exec(val);
 
-  updateLightsA(lights.A,cmd[1],Number(cmd[2]),Number(cmd[3]),Number(cmd[4]),Number(cmd[5]));
-  updateLightsB(lights.B,cmd[1],Number(cmd[2]),Number(cmd[3]),Number(cmd[4]),Number(cmd[5]));
-},lights);
+  updateLightsA(lights.A, cmd[1], Number(cmd[2]), Number(cmd[3]), Number(cmd[4]), Number(cmd[5]));
+  updateLightsB(lights.B, cmd[1], Number(cmd[2]), Number(cmd[3]), Number(cmd[4]), Number(cmd[5]));
+}, lights);
 
 var output1 = 0;
 var output2 = 0;
