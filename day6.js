@@ -26,7 +26,6 @@ function updateLightsB(lights, mode, x1, y1, x2, y2) {
 input.forEach(function (val) {
   var regEx = /(on|off|toggle)\D+(\d+),(\d+)\D+(\d+),(\d+)/;
   var cmd = regEx.exec(val);
-
   updateLightsA(lights.A, cmd[1], Number(cmd[2]), Number(cmd[3]), Number(cmd[4]), Number(cmd[5]));
   updateLightsB(lights.B, cmd[1], Number(cmd[2]), Number(cmd[3]), Number(cmd[4]), Number(cmd[5]));
 }, lights);
