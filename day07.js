@@ -3,7 +3,7 @@
 // 2797
 
 var fs = require('fs');
-var input = fs.readFileSync('day7_input.txt').toString().split('\n');
+var input = fs.readFileSync('day07_input.txt').toString().split('\n');
 
 var instructions = {};
 

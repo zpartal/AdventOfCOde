@@ -3,7 +3,7 @@
 // 804
 
 var fs = require('fs');
-var input = fs.readFileSync('day9_input.txt').toString().split('\n');
+var input = fs.readFileSync('day09_input.txt').toString().split('\n');
 
 var cities = {};
 input.forEach(function (val) {

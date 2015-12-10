@@ -1,7 +1,7 @@
 // http://adventofcode.com/day/3
 
 var fs = require('fs');
-var input = fs.readFileSync('day3_input.txt').toString().split('');
+var input = fs.readFileSync('day03_input.txt').toString().split('');
 
 var info = {
   loc: { x: 0, y: 0 },

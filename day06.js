@@ -1,7 +1,7 @@
 // http://adventofcode.com/day/6
 
 var fs = require('fs');
-var input = fs.readFileSync('day6_input.txt').toString().split('\n');
+var input = fs.readFileSync('day06_input.txt').toString().split('\n');
 
 var lights = { A: [], B: [] };
 

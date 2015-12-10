@@ -1,7 +1,7 @@
 // http://adventofcode.com/day/2
 
 var fs = require('fs');
-var input = fs.readFileSync('day2_input.txt').toString().split('\n').map(function (val) {
+var input = fs.readFileSync('day02_input.txt').toString().split('\n').map(function (val) {
   return val.split('x').map(Number).sort(function (a, b) { return a - b; });
 });
 

@@ -1,7 +1,7 @@
 // http://adventofcode.com/day/5
 
 var fs = require('fs');
-var input = fs.readFileSync('day5_input.txt').toString().split('\n');
+var input = fs.readFileSync('day05_input.txt').toString().split('\n');
 
 // Part 1
 var threeVowles = new RegExp("(.*[aeiou]){3}");

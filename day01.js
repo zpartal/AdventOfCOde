@@ -1,7 +1,7 @@
 // http://adventofcode.com/day/1
 
 var fs = require('fs');
-var input = fs.readFileSync('day1_input.txt').toString();
+var input = fs.readFileSync('day01_input.txt').toString();
 
 // Part 1
 var output1 = input.split('').reduce(function (prev, curr) {
