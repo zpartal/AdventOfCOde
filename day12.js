@@ -15,7 +15,6 @@ function parseJson(json) {
     else if (typeof json[key] == "object")
       parseJson(json[key]);
   }
-  return;
 }
 parseJson(input);
 console.log(sum);
