@@ -16,5 +16,6 @@ function parseJson(json) {
       parseJson(json[key]);
   }
 }
+
 parseJson(input);
 console.log(sum);
