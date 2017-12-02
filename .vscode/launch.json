@@ -5,7 +5,7 @@
 			"name": "Launch",
 			"type": "node",
 			"request": "launch",
-			"program": "${workspaceRoot}/day18.js",
+			"program": "${workspaceRoot}/2015/day20.js",
 			"stopOnEntry": false,
 			"args": [],
 			"cwd": "${workspaceRoot}/",

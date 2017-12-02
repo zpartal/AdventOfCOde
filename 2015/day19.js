@@ -28,3 +28,5 @@ for (atom in molecule) {
 
 // Part 1
 console.log(Object.keys(results).length);
+
+// Part 2 207
