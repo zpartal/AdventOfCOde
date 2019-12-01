@@ -1,18 +1,11 @@
 {
-  "name": "AdventOfCode",
+  "name": "AdventCode",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "git@github.com:zpartal/AdventOfCode.git",
+  "author": "Zachary Partal <zpartal@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.4"
-  },
-  "devDependencies": {
-    "@types/node": "^8.0.34",
-    "tslint": "^5.7.0",
-    "tslint-language-service": "^0.9.6",
-    "typescript": "^2.5.3"
-  },
-  "scripts": {
-    "build": "tsc 2017/day01.ts"
+    "lodash": "^4.17.15"
   }
 }
