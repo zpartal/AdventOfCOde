@@ -16,13 +16,13 @@ console.log(result1);
 /* Part 2 */
 
 function calcFuel2(mass, totalMass = 0) {
-  const x = parseInt(Math.floor(mass / 3)) - 2;
+  const fuel = calculateFuel(mass);
 
-  if (x < 0) {
+  if (fuel < 0) {
     return totalMass;
   }
 
-  return calcFuel2(x, totalMass + x);
+  return calcFuel2(fuel, totalMass + fuel);
 }
 
 const result2 = input.reduce((acc, curr) => acc + calcFuel2(curr), 0);
