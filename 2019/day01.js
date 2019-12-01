@@ -15,16 +15,11 @@ console.log(result1);
 
 /* Part 2 */
 
-function calcFuel2(mass, totalMass = 0) {
+function calculateFuel2(mass, totalMass = 0) {
   const fuel = calculateFuel(mass);
-
-  if (fuel < 0) {
-    return totalMass;
-  }
-
-  return calcFuel2(fuel, totalMass + fuel);
+  return fuel < 0 ? totalMass : calculateFuel2(fuel, totalMass + fuel);
 }
 
-const result2 = input.reduce((acc, curr) => acc + calcFuel2(curr), 0);
+const result2 = input.reduce((acc, curr) => acc + calculateFuel2(curr), 0);
 
 console.log(result2);
